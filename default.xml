@@ -12,8 +12,16 @@
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
+  <remote  name="widewing"
+           fetch="https://github.com/widewing" />
+
   <default revision="refs/heads/cm-11.0"
            remote="github"
+           sync-c="true"
+           sync-j="4" />
+           
+  <default revision="refs/heads/android-4.4.2_r1"
+           remote="widewing"
            sync-c="true"
            sync-j="4" />
 
@@ -471,4 +479,10 @@
   <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" />
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" />
+  <!-- Device Xiaomi MiOne Plus -->
+  <project path="device/xiaomi/mione_plus" name="android_device_xiaomi_mione_plus" remote="widewing" />
+  <project path="device/xiaomi/msm8660-common" name="android_device_xiaomi_msm8660-common" remote="widewing" />
+  <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="widewing" />
+  <project path="vendor/qcom" name="LOSP/proprietary_vendor_qcom" remote="github" revision="jb43" />
+  <project path="vendor/broadcom" name="LOSP/proprietary_vendor_broadcom" remote="github" revision="jb43" />
 </manifest>
